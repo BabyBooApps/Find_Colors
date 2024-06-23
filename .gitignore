@@ -1,14 +1,14 @@
 # Ignore Visual Studio Code settings
-#.vscode/
+.vscode/
 
 *.apk
 *.aab
 *.zip
 
 # Ignore Visual Studio files
-*.suo
-*.lock
-*.ide
+#*.suo
+#*.lock
+#*.ide
 
 # Ignore Unity files
 #*.tga
