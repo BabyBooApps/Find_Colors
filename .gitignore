@@ -1,9 +1,9 @@
 # Ignore Visual Studio Code settings
-.vscode/
+#.vscode/
 
 *.apk
 *.aab
-*.zip
+#*.zip
 
 # Ignore Visual Studio files
 #*.suo
@@ -38,3 +38,6 @@ Library/
 
 #.vs/
 
+Find The Colors/Apk/64_Bit/FindTheColorForKids_VC_4_VN_1_1-1.1-v4.symbols.zip
+Find The Colors/Apk/64_Bit/FindTheColorForKids_VC_5_VN_1.1.1-1.1.1-v5.symbols.zip
+Find The Colors/Apk/64_Bit/FindTheColorForKids_VC_6_VN_1.1.2-1.1.2-v6.symbols.zip
