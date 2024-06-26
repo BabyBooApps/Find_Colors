@@ -267,10 +267,10 @@ public class DisplayAds : MonoBehaviour
     #region UNITY 
     static void LoadUnityInterstitial()
     {
-        if (Advertisement.IsReady())
+       /* if (Advertisement.IsReady())
         {
             Advertisement.Show("video", new ShowOptions() { resultCallback = HandleAdResults });
-        }
+        }*/
     }
 
     static void HandleAdResults(ShowResult result)
@@ -313,12 +313,12 @@ public class DisplayAds : MonoBehaviour
                     interstitialDisplayTime = Time.time;
                     interstitial.Show();
                 }
-                else if (Advertisement.IsReady())  // unity ads
+               /* else if (Advertisement.IsReady())  // unity ads
                 {
                     gamePlayIndex = 0;
                     interstitialDisplayTime = Time.time;
                     LoadUnityInterstitial();
-                }
+                }*/
            // }
         }
         catch (Exception) { }

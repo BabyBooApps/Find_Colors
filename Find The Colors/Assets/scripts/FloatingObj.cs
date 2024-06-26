@@ -21,10 +21,10 @@ public class FloatingObj : MonoBehaviour {
 		//Debug.Log ("screenx: " + screenX);
 		//Debug.Log ("screeny: " + Screen.height);
 
-		leftMargin = Screen.width / 14f;
-		rightMargin = Screen.width / 5f;
-		topMargin = Screen.height / 14f;
-		bottomMargin = Screen.height / 4f;
+		leftMargin = Screen.width / 5f;
+		rightMargin = Screen.width / 14f;
+		topMargin = Screen.height / 4f;
+		bottomMargin = Screen.height / 14f;
 	//	Debug.Log ("screeny: " + screenY);
 
 
@@ -43,18 +43,18 @@ public class FloatingObj : MonoBehaviour {
 			transform.position = Camera.main.ScreenToWorldPoint(
 				new Vector3(playerPosScreen.x ,-(screenY - bottomMargin),playerPosScreen.z));
 		}
-		else if (playerPosScreen.y > Screen.height - screenY + topMargin)
+		else if (playerPosScreen.y > Screen.height - screenY - topMargin)
 		{
 			transform.position = Camera.main.ScreenToWorldPoint(
-				new Vector3(playerPosScreen.x,Screen.height - screenY + topMargin,playerPosScreen.z));
+				new Vector3(playerPosScreen.x,Screen.height - screenY - topMargin,playerPosScreen.z));
 		}
 		
 		// X - axis ( Horizontal on screen)
-		if (playerPosScreen.x < screenX - leftMargin )
+		if (playerPosScreen.x < screenX + leftMargin )
 		{
 			//Debug.Log ("playerPosScreen.x: " + playerPosScreen.x);
 			transform.position = Camera.main.ScreenToWorldPoint(
-				new Vector3(screenX - leftMargin,
+				new Vector3(screenX + leftMargin,
 									playerPosScreen.y,
 									playerPosScreen.z));
 		}

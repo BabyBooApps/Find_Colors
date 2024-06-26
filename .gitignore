@@ -35,8 +35,8 @@
 
 # Ignore Unity Library folder
 Library/
-
-#.vs/
+.vs/
+Temp/
 
 Find The Colors/Apk/64_Bit/FindTheColorForKids_VC_4_VN_1_1-1.1-v4.symbols.zip
 Find The Colors/Apk/64_Bit/FindTheColorForKids_VC_5_VN_1.1.1-1.1.1-v5.symbols.zip

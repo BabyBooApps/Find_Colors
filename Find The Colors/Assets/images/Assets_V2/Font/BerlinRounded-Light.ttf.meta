@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: dd7d436ec26e7cf47a8f5528fb5ac302
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Berlin Rounded
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c9cd76a9ade489a47b3b75b6d58c9c3d, type: 3}
+  - {fileID: 12800000, guid: da4e295dd20b4834a81a81edc13032ef, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

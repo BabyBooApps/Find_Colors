@@ -128,7 +128,7 @@ public class FloatingObjCreator_Timed : MonoBehaviour {
 	
 	void CreateObject()
 	{
-		Vector3 position = new Vector3(UnityEngine.Random.Range(-7.0F, 6.0F), UnityEngine.Random.Range(-5.0F, 5.0F), UnityEngine.Random.Range(-9.5F,-0.5F));
+		Vector3 position = new Vector3(UnityEngine.Random.Range(-4.0F, 7.0F), UnityEngine.Random.Range(-4F, 2.0F), UnityEngine.Random.Range(-9.5F,-0.5F));
 		
 		int index = random.Next(0,StaticArrays.objectNames.Length);
 
