@@ -94,6 +94,7 @@ public class FloatingObjCreator_Timed : MonoBehaviour {
 				
 				if(targetName.text == hit.transform.gameObject.name.Replace("(Clone)", ""))
 				{
+					DontDestroyMusic.Instance.PlaySuccessClip();
                     GameObject instance = Instantiate(Resources.Load("sparkles", typeof(ParticleSystem)), hit.transform.position,hit.transform.rotation) as GameObject;
                     scoreNo = scoreNo + 4;
                     hitsNo = hitsNo + 1;
@@ -103,11 +104,12 @@ public class FloatingObjCreator_Timed : MonoBehaviour {
 					DestroyImmediate(hit.transform.gameObject);
 					objectsCreated.RemoveAt(objIndex);
 					targetName.text = "";
-					targetImage.sprite = Resources.Load<Sprite>("dot");
+					//targetImage.sprite = Resources.Load<Sprite>("dot");
 					Invoke ("GenerateTarget",0.1F);
 					CreateObject();
 
 				}else{
+					DontDestroyMusic.Instance.Play_Failed_Clip();
 					scoreNo = scoreNo - 1;
 					//score.text = scoreNo.ToString();
 					missNo = missNo + 1;

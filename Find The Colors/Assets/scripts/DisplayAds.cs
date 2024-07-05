@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using GoogleMobileAds.Api;
+//using GoogleMobileAds.Api;
 using System;
 using UnityEngine.Advertisements;
 
@@ -15,8 +15,8 @@ public class DisplayAds : MonoBehaviour
     // string adUnitId_AdmobInterstitial = "ca-app-pub-3940256099942544/1033173712"; // test																				 
     static string adUnitId_AdmobInterstitial = "ca-app-pub-3176152248788238/2061299474";//"ca-app-pub-4357894923588656/7618419935";
 
-    public static BannerView bannerView = null;
-    public static InterstitialAd interstitial = null;
+    //public static BannerView bannerView = null;
+    //public static InterstitialAd interstitial = null;
 
     static int[][] maparray = new int[3][] { new int[3] { 0, 728, 90 },
                                             new int[3] { 1, 468, 60 },
@@ -24,14 +24,14 @@ public class DisplayAds : MonoBehaviour
     static float Density = 1;
     static int arrayIndex = 0;
 
-    static AdSize currentAdsize = AdSize.SmartBanner;
+    //static AdSize currentAdsize = AdSize.SmartBanner;
 
     //static AdSize adSize_1 = AdSize.SmartBanner;
     //static AdSize adSize_2 = AdSize.IABBanner;
     //static AdSize adSize_3 = AdSize.Banner;
 
 
-    static AdRequest request = null;
+    //static AdRequest request = null;
     public static DisplayAds instance = null;
 
     static bool displayUnityAd = true;
@@ -90,7 +90,7 @@ public class DisplayAds : MonoBehaviour
 
     private void Start()
     {
-        MobileAds.Initialize(appId);
+       /* MobileAds.Initialize(appId);
         Advertisement.Initialize(UnityAdId);
         interstitialDisplayTime = Time.time;
 
@@ -104,7 +104,7 @@ public class DisplayAds : MonoBehaviour
         currentAdsize = AdSize.SmartBanner;
 
         LoadAdmobBanner();
-        StartCoroutine(InitializeRoutine());
+        StartCoroutine(InitializeRoutine());*/
     }
 
 
@@ -119,15 +119,15 @@ public class DisplayAds : MonoBehaviour
     {
         try
         {
-            bannerView = new BannerView(adUnitId_AdmobBanner, currentAdsize, AdPosition.Bottom);
-            bannerView.OnAdFailedToLoad += AdmobBannerAdFailedToLoad;
-            bannerView.LoadAd(request);
+           /* bannerView = new BannerView(adUnitId_AdmobBanner, currentAdsize, AdPosition.Bottom);
+           // bannerView.OnAdFailedToLoad += AdmobBannerAdFailedToLoad;
+            bannerView.LoadAd(request);*/
         }
         catch (Exception) { }
 
     }
 
-    private void AdmobBannerAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+/*    private void AdmobBannerAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
         //if (currentAdsize == adSize_1)
         //{
@@ -153,15 +153,15 @@ public class DisplayAds : MonoBehaviour
         //}
         currentAdsize = AdSize.SmartBanner;
         instance.StartCoroutine(LoadAnotherAdmobBanner());
-    }
+    }*/
 
     IEnumerator LoadAnotherAdmobBanner()
     {
         yield return new WaitForSeconds(0.5f);
         try
         {
-            if (bannerView != null)
-                bannerView.Destroy();
+           /* if (bannerView != null)
+                bannerView.Destroy();*/
         }
         catch (Exception) { }
 
@@ -173,8 +173,8 @@ public class DisplayAds : MonoBehaviour
     {
         try
         {
-            if (bannerView != null)
-                bannerView.Hide();
+           /* if (bannerView != null)
+                bannerView.Hide();*/
         }
         catch (Exception)
         { }
@@ -184,8 +184,8 @@ public class DisplayAds : MonoBehaviour
     {
         try
         {
-            if (bannerView != null)
-                bannerView.Show();
+           /* if (bannerView != null)
+                bannerView.Show();*/
         }
         catch (Exception)
         { }
@@ -201,42 +201,42 @@ public class DisplayAds : MonoBehaviour
     {
         try
         {
-            if (interstitial != null)
+            /*if (interstitial != null)
             {
-                if (!interstitial.IsLoaded())
+               *//* if (!interstitial.IsLoaded())
                 {
                     interstitial.LoadAd(request);
-                }
+                }*//*
             }
             else
             {
-                interstitial = new InterstitialAd(adUnitId_AdmobInterstitial);
+                *//*interstitial = new InterstitialAd(adUnitId_AdmobInterstitial);
                 interstitial.OnAdClosed += OnAdmobInterstitialClosed;
                 interstitial.OnAdOpening += OnAdmobInterstitialOpened;
                 interstitial.OnAdFailedToLoad += OnAdmobInterstitialFailedToLoad;
-                interstitial.LoadAd(request);
-            }
+                interstitial.LoadAd(request);*//*
+            }*/
         }
         catch (Exception) { }
 
     }
-
+/*
     private void OnAdmobInterstitialFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
         try
         {
-            if (args.Message.ToLower().Contains("no fill"))
+            *//*if (args.Message.ToLower().Contains("no fill"))
             {
                 StartCoroutine(RequestAnotherAdmobInterstitial(10f));
             }
             else
             {
                 StartCoroutine(RequestAnotherAdmobInterstitial(30f));
-            }
+            }*//*
         }
         catch (Exception)
         { }
-    }
+    }*/
 
     private void OnAdmobInterstitialClosed(object sender, EventArgs e)
     {
@@ -249,8 +249,8 @@ public class DisplayAds : MonoBehaviour
     {
         try
         {
-            if (interstitial != null)
-                interstitial.Destroy();
+           /* if (interstitial != null)
+                interstitial.Destroy();*/
         }
         catch (Exception) { }
         yield return new WaitForSeconds(delay);
@@ -307,12 +307,12 @@ public class DisplayAds : MonoBehaviour
                 if (gamePlayIndex < interstitialDisplyIndex)
                     return;
 
-                if (interstitial.IsLoaded())  // admob
+               /* if (interstitial.IsLoaded())  // admob
                 {
                     gamePlayIndex = 0;
                     interstitialDisplayTime = Time.time;
                     interstitial.Show();
-                }
+                }*/
                /* else if (Advertisement.IsReady())  // unity ads
                 {
                     gamePlayIndex = 0;
@@ -331,13 +331,13 @@ public class DisplayAds : MonoBehaviour
     {
         try
         {
-            if (bannerView != null)
-                bannerView.OnAdFailedToLoad -= AdmobBannerAdFailedToLoad;
+           /* if (bannerView != null)
+               // bannerView.OnAdFailedToLoad -= AdmobBannerAdFailedToLoad;
             if (interstitial != null)
             {
-                interstitial.OnAdFailedToLoad -= OnAdmobInterstitialFailedToLoad;
-                interstitial.OnAdClosed -= OnAdmobInterstitialClosed;
-            }
+                *//*interstitial.OnAdFailedToLoad -= OnAdmobInterstitialFailedToLoad;
+                interstitial.OnAdClosed -= OnAdmobInterstitialClosed;*//*
+            }*/
         }
         catch (Exception) { }
     }

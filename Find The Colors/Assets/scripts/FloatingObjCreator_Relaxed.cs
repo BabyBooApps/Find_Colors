@@ -100,6 +100,7 @@ public class FloatingObjCreator_Relaxed: MonoBehaviour {
 			{
 				if(targetName.text == hit.transform.gameObject.name.Replace("(Clone)", ""))
 				{
+					DontDestroyMusic.Instance.PlaySuccessClip();
 					GameObject instance = Instantiate(Resources.Load("sparkles", typeof(ParticleSystem)), hit.transform.position,hit.transform.rotation) as GameObject;
 					scoreNo = scoreNo + 8;
 					hitsNo = hitsNo + 1;
@@ -110,7 +111,7 @@ public class FloatingObjCreator_Relaxed: MonoBehaviour {
 					objectsCreated.RemoveAt(objIndex);
 					targetName.text = "";
 					targetImage.color =  new Color(1.0f,1.0f,1.0f);
-					targetImage.sprite = Resources.Load<Sprite>("dot");
+					//targetImage.sprite = Resources.Load<Sprite>("dot");
 					if (hitsNo == 20) {
 						StaticArrays.currentTime = timeNo;
 						StaticArrays.currentHits = hitsNo;
@@ -124,6 +125,7 @@ public class FloatingObjCreator_Relaxed: MonoBehaviour {
 						CreateObject();
 					}
 				}else{
+					DontDestroyMusic.Instance.Play_Failed_Clip();
 					scoreNo = scoreNo - 2;
 					//score.text = scoreNo.ToString();
 					missNo = missNo + 1;
@@ -214,6 +216,8 @@ public class FloatingObjCreator_Relaxed: MonoBehaviour {
 	void PlaySound()
 	{
 		audioSource.PlayOneShot(audioclip);
+		
+
 	}
 
 }
