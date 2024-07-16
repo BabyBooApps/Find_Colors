@@ -100,7 +100,8 @@ public class FloatingObjCreator_Relaxed: MonoBehaviour {
 			{
 				if(targetName.text == hit.transform.gameObject.name.Replace("(Clone)", ""))
 				{
-					DontDestroyMusic.Instance.PlaySuccessClip();
+					//DontDestroyMusic.Instance.PlaySuccessClip();
+					PlayTargetSound();
 					GameObject instance = Instantiate(Resources.Load("sparkles", typeof(ParticleSystem)), hit.transform.position,hit.transform.rotation) as GameObject;
 					scoreNo = scoreNo + 8;
 					hitsNo = hitsNo + 1;
@@ -121,7 +122,7 @@ public class FloatingObjCreator_Relaxed: MonoBehaviour {
 						//Application.LoadLevel("ScoreMenu");
                         SceneManager.LoadScene("ScoreMenu");
 					}else{
-						Invoke ("GenerateTarget",0.1F);
+						Invoke ("GenerateTarget",1.0F);
 						CreateObject();
 					}
 				}else{

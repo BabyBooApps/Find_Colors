@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Little Brain Works
+  companyName: BabyBooApps
   productName: Find The Color
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -164,7 +164,7 @@ PlayerSettings:
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 22
-  AndroidTargetSdkVersion: 34
+  AndroidTargetSdkVersion: 33
   AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 1
@@ -241,24 +241,24 @@ PlayerSettings:
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
-  useCustomMainGradleTemplate: 0
+  useCustomMainGradleTemplate: 1
   useCustomLauncherGradleManifest: 1
   useCustomBaseGradleTemplate: 1
-  useCustomGradlePropertiesTemplate: 0
+  useCustomGradlePropertiesTemplate: 1
   useCustomProguardFile: 0
   AndroidTargetArchitectures: 3
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: FindTheColors_KeyStore.keystore'
-  AndroidKeyaliasName: findthecolors
+  AndroidKeystoreName: '{inproject}: KeyStore/V2/FindColors_Keystore.keystore'
+  AndroidKeyaliasName: findcolors
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 1
+  androidUseCustomKeystore: 0
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -274,7 +274,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 0abf07cf7ccd23c4cb0f6acabdc71a9a, type: 3}
+      m_Icon: {fileID: 2800000, guid: 8256f88269893a447adc15c83e43d389, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -777,7 +777,12 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -792,11 +797,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 0add5b99-8d0b-4d68-80c6-4996d3c30a80
+  cloudProjectId: ae8d4d6e-1be8-4385-a44b-cf50a6a1d639
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Find The Colors
-  organizationId: littlebrainworks
+  projectName: Find The Color
+  organizationId: babybooapps
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

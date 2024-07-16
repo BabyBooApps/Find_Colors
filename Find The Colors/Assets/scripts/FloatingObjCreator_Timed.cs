@@ -22,7 +22,7 @@ public class FloatingObjCreator_Timed : MonoBehaviour {
 	int missNo = 0;
 	int timeNo = 60;
 	
-	List<string> objectsCreated = new List<string> ();
+	public List<string> objectsCreated = new List<string> ();
 	System.Random random = new System.Random();
 	
 	int objIndex = 0;
@@ -94,8 +94,9 @@ public class FloatingObjCreator_Timed : MonoBehaviour {
 				
 				if(targetName.text == hit.transform.gameObject.name.Replace("(Clone)", ""))
 				{
-					DontDestroyMusic.Instance.PlaySuccessClip();
-                    GameObject instance = Instantiate(Resources.Load("sparkles", typeof(ParticleSystem)), hit.transform.position,hit.transform.rotation) as GameObject;
+					PlayTargetSound();
+					//DontDestroyMusic.Instance.PlaySuccessClip();
+					GameObject instance = Instantiate(Resources.Load("sparkles", typeof(ParticleSystem)), hit.transform.position,hit.transform.rotation) as GameObject;
                     scoreNo = scoreNo + 4;
                     hitsNo = hitsNo + 1;
 					//score.text = scoreNo.ToString();
@@ -105,7 +106,7 @@ public class FloatingObjCreator_Timed : MonoBehaviour {
 					objectsCreated.RemoveAt(objIndex);
 					targetName.text = "";
 					//targetImage.sprite = Resources.Load<Sprite>("dot");
-					Invoke ("GenerateTarget",0.1F);
+					Invoke ("GenerateTarget",1.0F);
 					CreateObject();
 
 				}else{
