@@ -22,9 +22,9 @@ public class FloatingObj : MonoBehaviour {
 		//Debug.Log ("screeny: " + Screen.height);
 
 		leftMargin = Screen.width / 5f;
-		rightMargin = Screen.width / 14f;
+		rightMargin = Screen.width / 10f;
 		topMargin = Screen.height / 4f;
-		bottomMargin = Screen.height / 14f;
+		bottomMargin = Screen.height / 10f;
 	//	Debug.Log ("screeny: " + screenY);
 
 
