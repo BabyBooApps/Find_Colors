@@ -49,7 +49,8 @@ public class FloatingObjCreator_Timed : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-        DisplayAds.DisplayInterstitial();
+		AdsManager.interstitial.ShowAd();
+        //DisplayAds.DisplayInterstitial();
         StaticArrays.currentMode = "timed";
 		StaticArrays.currentModeHighScore = PlayerPrefs.GetInt (StaticArrays.timedModeHighScoreKey,0);
 

@@ -69,7 +69,7 @@ public class CameraResize : MonoBehaviour
         float heightScale = (float) worldScreenHeight / (float)sr.sprite.bounds.size.y ;		
 
 
-		background.transform.localScale = new Vector3(widthScale, heightScale, 1);
+		background.transform.localScale = new Vector3(widthScale * 1.5f, heightScale * 1.5f, 1);
 		/*
 		if(widthScale > heightScale)
 			background.transform.localScale = new Vector3(widthScale, widthScale, 1);

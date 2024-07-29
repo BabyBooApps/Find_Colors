@@ -61,18 +61,42 @@
     <Compile Include="Assets\scripts\ScoreUpdater.cs" />
     <Compile Include="Assets\scripts\ZoomInZoomOut.cs" />
     <Compile Include="Assets\scripts\StaticArrays.cs" />
+    <Compile Include="Assets\scripts\MenuScene.cs" />
     <Compile Include="Assets\scripts\FlyingObj.cs" />
+    <Compile Include="Assets\scripts\Ads\AdmobAdsScript.cs" />
     <Compile Include="Assets\scripts\Utilities.cs" />
+    <Compile Include="Assets\scripts\Ads\AdsManager.cs" />
     <Compile Include="Assets\scripts\FlyingObjCreator.cs" />
-    <Compile Include="Assets\scripts\DisplayAds.cs" />
     <Compile Include="Assets\scripts\FloatingObjCreator_Relaxed.cs" />
+    <Compile Include="Assets\scripts\Ads\RewardedAdController.cs" />
     <Compile Include="Assets\scripts\CameraResize.cs" />
     <Compile Include="Assets\scripts\BackgroundResize.cs" />
     <Compile Include="Assets\scripts\DontDestroyMusic.cs" />
+    <Compile Include="Assets\scripts\InitializationScript.cs" />
+    <Compile Include="Assets\scripts\Ads\InterstitialAdController.cs" />
     <Compile Include="Assets\scripts\FloatingObj.cs" />
     <Compile Include="Assets\scripts\MenuButtons.cs" />
     <Compile Include="Assets\scripts\Fading.cs" />
     <Compile Include="Assets\scripts\Random.cs" />
+    <Compile Include="Assets\scripts\Ads\BannerViewController.cs" />
+    <Compile Include="Assets\scripts\HomeScreen.cs" />
+    <Compile Include="Assets\scripts\IAP\IAP_Manager.cs" />
+    <Compile Include="Assets\scripts\IAP\InAppRewards.cs" />
+    <Compile Include="Assets\scripts\PlayerPrefsManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Common.dll" />
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.iOS.dll" />
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.dll" />
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds_version-8.5.2_manifest.txt" />
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.iOS.dll" />
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Core.dll" />
+    <None Include="Assets\GoogleMobileAds\link.xml" />
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll" />
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll" />
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll" />
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Android.dll" />
+    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.Android.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -312,6 +336,12 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.29f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -321,8 +351,20 @@
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump.Unity">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Common">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.29f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -821,6 +863,10 @@
     <ProjectReference Include="UnityEngine.Advertisements.Editor.csproj">
       <Project>{B2A0236D-988D-CADD-29EA-11B985061025}</Project>
       <Name>UnityEngine.Advertisements.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="GoogleMobileAds.Editor.csproj">
+      <Project>{F66BAB1D-D5F1-B506-581D-DBED07E2F043}</Project>
+      <Name>GoogleMobileAds.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

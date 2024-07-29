@@ -56,18 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Codeless\CodelessIAPStoreListener.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Codeless\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Codeless\IAPConfigurationHelper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Codeless\CodelessButtonType.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Codeless\IAPButton.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Codeless\CodelessIAPButton.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Codeless\IAPListener.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Codeless\ComboBox.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Codeless\BaseIAPButton.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.2\Runtime\Codeless\CodelessIAPStoreListener.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.2\Runtime\Codeless\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.2\Runtime\Codeless\IAPConfigurationHelper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.2\Runtime\Codeless\CodelessButtonType.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.2\Runtime\Codeless\IAPButton.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.2\Runtime\Codeless\CodelessIAPButton.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.2\Runtime\Codeless\IAPListener.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.2\Runtime\Codeless\ComboBox.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.2\Runtime\Codeless\BaseIAPButton.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Codeless\UnityEngine.Purchasing.Codeless.asmdef" />
+    <None Include="Library\PackageCache\com.unity.purchasing@4.12.2\Runtime\Codeless\UnityEngine.Purchasing.Codeless.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -264,6 +264,24 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump.Android">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Android">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Common">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.29f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

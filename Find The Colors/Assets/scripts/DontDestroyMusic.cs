@@ -44,10 +44,7 @@ public class DontDestroyMusic : MonoBehaviour
         GameSounds_Source = AudioSources[1];
     }
 
-    public void On_Play_Btn_Click()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
+    
 
     public void Play_Button_Sound_Clip(AudioClip clip)
     {

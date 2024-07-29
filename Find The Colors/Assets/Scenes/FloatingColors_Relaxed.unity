@@ -1050,7 +1050,7 @@ Transform:
   m_GameObject: {fileID: 611153647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.042, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2577,6 +2577,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1476711370}
+    - target: {fileID: 11467624, guid: 310eddc61e6f36545be5b5ee7bbfbb75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 22429586, guid: 310eddc61e6f36545be5b5ee7bbfbb75, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

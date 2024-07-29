@@ -58,7 +58,8 @@ public class FloatingObjCreator_Relaxed: MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-        DisplayAds.DisplayInterstitial();
+		AdsManager.interstitial.ShowAd();
+       // DisplayAds.DisplayInterstitial();
         StaticArrays.currentMode = "relaxed";
 		StaticArrays.currentModeHighScore = PlayerPrefs.GetInt (StaticArrays.relaxedModeHighScoreKey,0);
 
